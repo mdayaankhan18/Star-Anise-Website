@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Star Anise Patisserie — artisanal bakes, modern patisserie, coffee and gourmet café fare in Colaba, Mumbai.">
+<title>Star Anise Patisserie | Colaba, Mumbai</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:wght@400;500;600&display=swap');
+
+:root{
+  --cream:#f5efe4; --paper:#fbf7ef; --navy:#233a4b; --ink:#182a35;
+  --gold:#b89a62; --line:#d9c9aa; --muted:#6d706e;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--cream);color:var(--ink);font-family:"DM Sans",sans-serif}
+a{color:inherit;text-decoration:none}
+.container{width:min(1180px,92%);margin:auto}
+.topbar{background:var(--navy);color:#fff;padding:9px 0;font-size:12px;letter-spacing:.08em;text-align:center}
+header{position:sticky;top:0;z-index:20;background:rgba(245,239,228,.95);backdrop-filter:blur(12px);border-bottom:1px solid rgba(35,58,75,.12)}
+.nav{height:82px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+.brand img{width:170px;display:block;filter:invert(80%);mix-blend-mode:multiply}
+.navlinks{display:flex;gap:28px;font-size:13px;letter-spacing:.08em;text-transform:uppercase}
+.navlinks a:hover{color:var(--gold)}
+.menu-btn{display:none;background:none;border:0;font-size:26px}
+.hero{min-height:680px;display:grid;place-items:end center;padding:40px 0 70px;background:
+linear-gradient(90deg,rgba(24,42,53,.72),rgba(24,42,53,.15)),
+url("assets/cafe.jpg") center/cover}
+.hero-card{width:min(760px,92%);background:rgba(251,247,239,.94);padding:54px;text-align:center;border:1px solid rgba(184,154,98,.55);box-shadow:0 20px 70px rgba(0,0,0,.18)}
+.kicker{font-size:11px;letter-spacing:.25em;text-transform:uppercase;color:var(--gold);font-weight:600}
+h1,h2,h3{font-family:"Playfair Display",serif;font-weight:500}
+h1{font-size:clamp(44px,7vw,78px);line-height:.98;margin:18px 0 20px;color:var(--navy)}
+.hero p{font-family:"Playfair Display",serif;font-size:20px;line-height:1.55;color:#46535a;margin:0 auto 30px;max-width:600px}
+.buttons{display:flex;justify-content:center;gap:12px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:14px 24px;border:1px solid var(--navy);font-size:12px;letter-spacing:.1em;text-transform:uppercase;transition:.2s}
+.btn.primary{background:var(--navy);color:#fff}.btn:hover{transform:translateY(-2px)}
+.section{padding:100px 0}
+.section.alt{background:var(--paper)}
+.section-head{text-align:center;max-width:720px;margin:0 auto 55px}
+.section-head h2{font-size:48px;color:var(--navy);margin:12px 0}
+.section-head p{color:var(--muted);line-height:1.7}
+.intro{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}
+.intro h2{font-size:52px;line-height:1.05;color:var(--navy);margin:12px 0 22px}
+.intro p{line-height:1.85;color:#626764}
+.quote{border-left:2px solid var(--gold);padding-left:24px;font-family:"Playfair Display",serif;font-size:25px;line-height:1.5;color:var(--navy);margin-top:28px}
+.photo{width:100%;height:560px;object-fit:cover}
+.menu-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.menu-card{background:var(--cream);border:1px solid var(--line);padding:28px}
+.menu-card h3{font-size:26px;color:var(--navy);margin:0 0 18px}
+.item{padding:13px 0;border-bottom:1px solid rgba(184,154,98,.25)}
+.item:last-child{border-bottom:0}
+.item-top{display:flex;justify-content:space-between;gap:12px;font-weight:600}
+.price{color:var(--gold);white-space:nowrap}
+.desc{font-size:12px;color:var(--muted);line-height:1.5;margin-top:5px}
+.cake-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.cake{background:var(--paper);border:1px solid var(--line);padding:28px}
+.cake h3{font-size:25px;color:var(--navy);margin:0 0 8px}
+.cake p{font-size:13px;line-height:1.6;color:var(--muted)}
+.cake .sizes{font-size:12px;color:var(--gold);font-weight:600}
+.cta{background:var(--navy);color:#fff;text-align:center;padding:90px 20px}
+.cta h2{font-size:50px;margin:12px 0}
+.cta p{color:#dfe5e8;max-width:600px;margin:0 auto 28px;line-height:1.7}
+.locations{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}
+.address{font-size:17px;line-height:1.8;color:#59615f}
+.contact-card{border:1px solid var(--line);padding:35px;background:var(--paper)}
+.contact-row{padding:18px 0;border-bottom:1px solid var(--line)}
+.contact-row:last-child{border:0}
+.label{display:block;text-transform:uppercase;letter-spacing:.15em;font-size:10px;color:var(--gold);margin-bottom:5px}
+footer{background:#172b39;color:#fff;padding:42px 0}
+.footer-inner{display:flex;justify-content:space-between;gap:30px;align-items:center}
+footer img{width:150px}
+footer small{color:#bdc8cd;line-height:1.7}
+@media(max-width:800px){
+  .navlinks{display:none}.menu-btn{display:block}
+  .hero{min-height:620px;padding-bottom:30px}
+  .hero-card{padding:36px 22px}
+  .intro,.locations{grid-template-columns:1fr;gap:35px}
+  .photo{height:400px}
+  .menu-grid,.cake-grid{grid-template-columns:1fr}
+  .section{padding:70px 0}
+  .section-head h2,.intro h2,.cta h2{font-size:39px}
+  .footer-inner{flex-direction:column;align-items:flex-start}
+}
+</style>
+</head>
+<body>
+<div class="topbar">ARTISANAL BAKES · MODERN PATISSERIE · COLABA</div>
+<header>
+  <div class="container nav">
+    <a class="brand" href="#"><img src="assets/logo-white.png" alt="Star Anise Patisserie"></a>
+    <nav class="navlinks">
+      <a href="#story">Our Story</a><a href="#menu">Menu</a><a href="#cakes">Cakes</a><a href="#cafe">Café</a><a href="#visit">Visit</a>
+    </nav>
+    <button class="menu-btn" aria-label="Menu">☰</button>
+  </div>
+</header>
+
+<main>
+<section class="hero">
+  <div class="hero-card">
+    <div class="kicker">Patisserie · Café · Gourmandise</div>
+    <h1>Beautifully made.<br>Made to be savoured.</h1>
+    <p>Handcrafted with premium ingredients and a generous touch of joy.</p>
+    <div class="buttons">
+      <a class="btn primary" href="#menu">Explore the Menu</a>
+      <a class="btn" target="_blank" rel="noopener" href="https://wa.me/919136400940?text=Hello%20Star%20Anise%2C%20I%27d%20like%20to%20place%20an%20order.">Order on WhatsApp</a>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="story">
+  <div class="container intro">
+    <img class="photo" src="assets/cafe.jpg" alt="Star Anise Patisserie café in Colaba">
+    <div>
+      <div class="kicker">The Star Anise experience</div>
+      <h2>A patisserie, café and little escape in Colaba.</h2>
+      <p>Star Anise brings together artisanal bakes, modern patisserie and gourmet café favourites in a warm, elegant setting. From flaky croissants and fresh sourdough to celebration cakes, entremets, sandwiches, coffee, matcha and more — there is something for every mood.</p>
+      <div class="quote">“A little luxury, for every day.”</div>
+      <p style="font-size:12px;margin-top:28px;color:#7a7c79;line-height:1.7">
+        <strong>Star Anise Patisserie</strong> is a brand of
+        <strong>Star Anise Fine Foods &amp; Leisure Private Limited.</strong>
+      </p>
+    </div>
+  </div>
+</section>
+
+<section class="section alt" id="menu">
+<div class="container">
+  <div class="section-head"><div class="kicker">From the counter & kitchen</div><h2>The Menu</h2><p>Explore a selection from the current Colaba menu. Prices shown are in INR.</p></div>
+  <div class="menu-grid">
+    <div class="menu-card">
+      <h3>Sweet Temptations</h3>
+      <div class="item"><div class="item-top"><span>Nutella Bomboloni</span><span class="price">₹250</span></div></div>
+      <div class="item"><div class="item-top"><span>Couverture almond rocks</span><span class="price">₹350</span></div></div>
+      <div class="item"><div class="item-top"><span>Assorted macarons · 6</span><span class="price">₹540</span></div></div>
+      <div class="item"><div class="item-top"><span>Chocolate walnut fudge cookies</span><span class="price">₹380</span></div><div class="desc">220 gms</div></div>
+      <div class="item"><div class="item-top"><span>Parsi mawa travel cake</span><span class="price">₹280</span></div><div class="desc">220 gms</div></div>
+    </div>
+    <div class="menu-card">
+      <h3>Pastries & Entremets</h3>
+      <div class="item"><div class="item-top"><span>Belgian Chocolate Indulgence</span><span class="price">₹280</span></div></div>
+      <div class="item"><div class="item-top"><span>Citron</span><span class="price">₹320</span></div></div>
+      <div class="item"><div class="item-top"><span>Hyper-realistic orange</span><span class="price">₹350</span></div></div>
+      <div class="item"><div class="item-top"><span>Rose pistachio rasmalai jar</span><span class="price">₹350</span></div></div>
+      <div class="item"><div class="item-top"><span>Basque cheesecake</span><span class="price">₹425</span></div></div>
+      <div class="item"><div class="item-top"><span>Premium tiramisu jar</span><span class="price">₹425</span></div></div>
+    </div>
+    <div class="menu-card">
+      <h3>Bakery & Breads</h3>
+      <div class="item"><div class="item-top"><span>French croissant</span><span class="price">₹200</span></div></div>
+      <div class="item"><div class="item-top"><span>Caramel cinnamon roll</span><span class="price">₹200</span></div></div>
+      <div class="item"><div class="item-top"><span>Hazelnut chocolate croissant</span><span class="price">₹280</span></div></div>
+      <div class="item"><div class="item-top"><span>Sourdough country loaf</span><span class="price">₹200</span></div><div class="desc">450 gms</div></div>
+      <div class="item"><div class="item-top"><span>Whole wheat sourdough</span><span class="price">₹250</span></div><div class="desc">450 gms</div></div>
+      <div class="item"><div class="item-top"><span>Sourdough French baguette</span><span class="price">₹150</span></div></div>
+    </div>
+    <div class="menu-card">
+      <h3>Gourmet Sandwiches</h3>
+      <div class="item"><div class="item-top"><span>Garden Harvest S/W</span><span class="price">₹320</span></div></div>
+      <div class="item"><div class="item-top"><span>Three Cheese Melt S/W</span><span class="price">₹350</span></div></div>
+      <div class="item"><div class="item-top"><span>Avocado Focaccia S/W</span><span class="price">₹395</span></div></div>
+      <div class="item"><div class="item-top"><span>Roasted Garlic Chicken S/W</span><span class="price">₹320</span></div></div>
+      <div class="item"><div class="item-top"><span>Smoked Chicken & Mushroom Panini</span><span class="price">₹350</span></div></div>
+      <div class="item"><div class="item-top"><span>Kali Miri Chicken Kathi Roll</span><span class="price">₹350</span></div></div>
+    </div>
+    <div class="menu-card">
+      <h3>Matcha, Ube & Tea</h3>
+      <div class="item"><div class="item-top"><span>Masala Chai</span><span class="price">₹150</span></div></div>
+      <div class="item"><div class="item-top"><span>English Breakfast Tea Pot</span><span class="price">₹220</span></div></div>
+      <div class="item"><div class="item-top"><span>Ube latte</span><span class="price">₹350</span></div></div>
+      <div class="item"><div class="item-top"><span>Matcha latte</span><span class="price">₹350</span></div></div>
+      <div class="item"><div class="item-top"><span>Spanish matcha latte</span><span class="price">₹375</span></div></div>
+      <div class="item"><div class="item-top"><span>Strawberry matcha latte</span><span class="price">₹375</span></div></div>
+    </div>
+    <div class="menu-card">
+      <h3>Coffee & Cold Favourites</h3>
+      <div class="item"><div class="item-top"><span>Espresso · single</span><span class="price">₹150</span></div></div>
+      <div class="item"><div class="item-top"><span>Café latte</span><span class="price">₹280</span></div></div>
+      <div class="item"><div class="item-top"><span>Flat white</span><span class="price">₹320</span></div></div>
+      <div class="item"><div class="item-top"><span>Spanish latte</span><span class="price">₹350</span></div></div>
+      <div class="item"><div class="item-top"><span>Iced caramel macchiato</span><span class="price">₹350</span></div></div>
+      <div class="item"><div class="item-top"><span>Lotus Biscoff milkshake</span><span class="price">₹400</span></div></div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="section" id="cakes">
+<div class="container">
+ <div class="section-head"><div class="kicker">Celebrations, made beautifully</div><h2>Cakes & Gateaux</h2><p>Celebration cakes are available in selected sizes.</p></div>
+ <div class="cake-grid">
+  <article class="cake"><h3>Fresh Fruit Gateaux</h3><div class="sizes">300 g ₹490 · 500 g ₹790 · 1 kg ₹1,400</div><p>Soft vanilla sponge, lightly sweetened fresh dairy cream and handpicked seasonal fruits.</p></article>
+  <article class="cake"><h3>Belgian Chocolate Indulgence</h3><div class="sizes">300 g ₹520 · 500 g ₹850 · 1 kg ₹1,600</div><p>Moist chocolate sponge, Belgian chocolate truffle cream and silky Callebaut dark chocolate ganache.</p></article>
+  <article class="cake"><h3>Sea Salt Caramel Hazelnut</h3><div class="sizes">300 g ₹590 · 500 g ₹950 · 1 kg ₹1,800</div><p>Moist cake layered with salted caramel, roasted hazelnuts and luscious milk chocolate.</p></article>
+  <article class="cake"><h3>Citrus Chocolate Fudge</h3><div class="sizes">500 g ₹950 · 1 kg ₹1,800</div><p>Sugar-free and gluten-free, with premium dark chocolate, bright citrus notes and a silky fudge glaze.</p></article>
+  <article class="cake"><h3>Lotus Biscoff Cheesecake</h3><div class="sizes">500 g ₹1,100 · 1 kg ₹2,200</div><p>No-bake cheesecake with cream cheese, dairy cream, Biscoff biscuit base and caramelised crumbs.</p></article>
+  <article class="cake"><h3>Basque Cheesecake</h3><div class="sizes">500 g ₹1,600 · 1 kg ₹2,999</div><p>A deeply caramelised exterior with an exceptionally creamy, custard-like centre.</p></article>
+ </div>
+</div>
+</section>
+
+<section class="cta" id="cafe">
+ <div class="kicker">Come by for a little indulgence</div>
+ <h2>See you in Colaba.</h2>
+ <p>Drop in for coffee, a pastry, a fresh loaf, a gourmet sandwich — or something beautiful for your next celebration.</p>
+ <div class="buttons"><a class="btn" style="border-color:#fff;color:#fff" target="_blank" rel="noopener" href="https://wa.me/919136400940?text=Hello%20Star%20Anise%2C%20I%27d%20like%20to%20know%20more.">WhatsApp Us</a><a class="btn" style="border-color:#fff;color:#fff" target="_blank" rel="noopener" href="https://www.instagram.com/staranisepatisserie/">Instagram</a></div>
+</section>
+
+<section class="section" id="visit">
+<div class="container locations">
+ <div><div class="kicker">Visit Star Anise</div><h2 style="font-size:50px;color:var(--navy);margin:12px 0 20px;font-family:'Playfair Display',serif">Colaba Causeway</h2><p class="address">117, S, Shop Number 4, 37, B Singh Road,<br>Colaba Causeway, Mumbai, Maharashtra 400001</p><a class="btn primary" target="_blank" rel="noopener" href="https://www.google.com/maps/search/?api=1&query=Star%20Anise%20Patisserie%20117%20S%20Shop%20Number%204%2037%20B%20Singh%20Road%20Colaba%20Causeway%20Mumbai">Get Directions</a></div>
+ <div class="contact-card">
+  <div class="contact-row"><span class="label">Call / WhatsApp</span><a href="tel:+919136400940">+91 91364 00940</a></div>
+  <div class="contact-row"><span class="label">Instagram</span><a target="_blank" rel="noopener" href="https://www.instagram.com/staranisepatisserie/">@staranisepatisserie</a></div>
+  <div class="contact-row"><span class="label">Order & Enquiries</span><a target="_blank" rel="noopener" href="https://wa.me/919136400940">Start a WhatsApp conversation →</a></div>
+ </div>
+</div>
+</section>
+</main>
+
+<section class="section alt" id="legal" style="padding:45px 0">
+  <div class="container" style="text-align:center;max-width:820px">
+    <div class="kicker">Business Information</div>
+    <p style="margin:12px 0 0;color:#59615f;line-height:1.7;font-size:13px">
+      <strong>Star Anise Patisserie</strong> is a brand of
+      <strong>Star Anise Fine Foods &amp; Leisure Private Limited.</strong>
+    </p>
+  </div>
+</section>
+
+<footer>
+ <div class="container footer-inner">
+  <img src="assets/logo-white.png" alt="Star Anise">
+  <small>Artisanal Bakes · Modern Patisserie<br>
+  <strong>Star Anise Patisserie</strong> is a brand of <strong>Star Anise Fine Foods &amp; Leisure Private Limited.</strong><br>
+  © 2026 Star Anise Patisserie. All rights reserved.</small>
+ </div>
+</footer>
+</body>
+</html>
